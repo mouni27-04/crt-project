@@ -3,7 +3,7 @@
 // =============================================
 
 import { useState, useEffect, createContext, useContext } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter} from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -47,13 +47,13 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <main>
           <AnimatedRoutes />
         </main>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeContext.Provider>
   );
 }
